@@ -13,9 +13,10 @@ app.use(morgan('dev')); // Log HTTP requests
 app.use(logger); // Use custom logger
 
 // Routes
-app.use('/api/customers', customerRoutes);
+app.use('/', customerRoutes);
 
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
